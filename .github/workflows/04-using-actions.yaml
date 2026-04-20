@@ -15,9 +15,6 @@ jobs:
           uses: actions/checkout@v6 
         - name: Printing Folders
           run: ls -la
-
-        - name: echo test
-          run: hello tests  
           
         - name: Setup Node
           uses: actions/setup-node@v6
