@@ -9,16 +9,17 @@ jobs:
         steps:
             - name: Show OS
               run:  |   
-                    echo "This job running on an Ubuntu runner!"
-                    echo {{ runner.os }}
+                    echo "This job running on an Ubuntu runner!
+                    echo "{{ runner.os }}"
 
     windows-echo:
         runs-on: windows-latest
         steps:
             - name: Show OS
+              shell: bash
               run: | 
                     echo "This job running on a Windows runner!"
-                    echo {{ runner.os }}
+                    echo "{{ runner.os }}"
 
     macos-echo:
         runs-on: macos-latest
@@ -26,6 +27,6 @@ jobs:
             - name: Show OS
               run:  |
                     echo "This job running on a macOS runner!"
-                    echo {{ runner.os }}
+                    echo "{{ runner.os }}"
 
                     
