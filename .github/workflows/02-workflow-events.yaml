@@ -5,11 +5,11 @@ on:
     pull_request:
     workflow_dispatch:
     schedule:
-        - cron: "*/5 0 * * *"
+        - cron: "*/5 * * * *" # every 5 minutes
 
 jobs:
     echo:
         runs-on: ubuntu-latest
         steps:
             - name: Show the trigger
-              run: echo "This workflow runs on ${{ github.event_name }} events!"
+              run: echo "This workflow runs on ${{ github.event_name }} event!"
